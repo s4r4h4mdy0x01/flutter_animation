@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
 
+import 'widgets/container_image.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
   final List<String> imagesPath = const [
@@ -28,16 +30,7 @@ class HomeScreen extends StatelessWidget {
       child: ListView.builder(
         itemCount: imagesPath.length,
         itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-            child: Container(
-              height: 200,
-              child: Image.asset(
-                imagesPath[index],
-                fit: BoxFit.cover,
-              ),
-            ),
-          );
+          return ContainerImage(imagesPath: imagesPath[index]);
         },
       ),
     ));

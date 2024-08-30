@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_animation/splash.dart';
+import 'package:flutter_animation/ui/splash/splash.dart';
 
 void main() {
   runApp(const MyApp());
