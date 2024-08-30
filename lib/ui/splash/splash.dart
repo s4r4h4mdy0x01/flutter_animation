@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animation/core/router/routes.dart';
 import 'package:flutter_animation/home.dart';
 import 'package:lottie/lottie.dart';
 
@@ -12,7 +11,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen>
     with SingleTickerProviderStateMixin {
-  late AnimationController _animationController;
+  late final AnimationController _animationController;
 
   @override
   void initState() {
@@ -30,14 +29,6 @@ class _SplashScreenState extends State<SplashScreen>
     super.dispose();
   }
 
-  void _onLottieLoaded(LottieComposition composition) {
-    _animationController
-      ..duration = composition.duration * 0.3
-      ..forward().then((_) {
-        _navigateToHomeScreen();
-      });
-  }
-
   void _navigateToHomeScreen() {
     Navigator.of(context).pushReplacement(
       PageRouteBuilder(
@@ -46,6 +37,14 @@ class _SplashScreenState extends State<SplashScreen>
         transitionsBuilder: _buildTransition,
       ),
     );
+  }
+
+  void _onLottieLoaded(LottieComposition composition) {
+    _animationController
+      ..duration = composition.duration * 0.3
+      ..forward().then((_) {
+        _navigateToHomeScreen();
+      });
   }
 
   Widget _buildTransition(
@@ -58,7 +57,8 @@ class _SplashScreenState extends State<SplashScreen>
     var end = Offset.zero;
     var curve = Curves.easeIn;
 
-    var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+    var tween =
+        Tween<Offset>(begin: begin, end: end).chain(CurveTween(curve: curve));
     var offsetAnimation = animation.drive(tween);
 
     return SlideTransition(
