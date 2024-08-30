@@ -9,8 +9,9 @@ This project is a starting point for a Flutter application.
 ### animation splash screen Using the lottie, SlideTransition To go to the Home screen 
 ### in home screen AnimatedOpacity and AnimatedPadding LiquidPullToRefresh
 
+![Uploading bob.gif…]()
 
-Uploading WhatsApp Video 2024-08-30 at 9.31.15 AM.mp4…
+
 
 
 
