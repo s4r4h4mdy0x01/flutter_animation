@@ -6,7 +6,13 @@ A new Flutter project.
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+### animation splash screen Using the lottie, SlideTransition To go to the Home screen 
+### in home screen AnimatedOpacity and AnimatedPadding LiquidPullToRefresh
+
+
+Uploading WhatsApp Video 2024-08-30 at 9.31.15 AM.mp4…
+
+
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
